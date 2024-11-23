@@ -1,0 +1,48 @@
+<!--Create a CRD application (CRUD without update) using json-server or another API
+Use fetch and async/await to interact with the API
+Use a form to create/post new entities
+Build a way for users to delete entities
+Include a way to get entities from the API and display them
+You do NOT need update, but you can add it if you'd like
+Use Bootstrap and/or CSS to style your project-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div class="container">
+          <h1>Entity Manager</h1>
+      
+          <!-- Create New Entity Form -->
+          <form id="createEntityForm">
+            <h2>Create New Entity</h2>
+            <label for="entityName">Entity Name</label>
+            <input type="text" id="entityName" name="entityName" placeholder="Enter entity name" required>
+            <button type="submit">Create Entity</button>
+            <p id="createMessage"></p>
+          </form>
+      
+          <!-- Fetch and Display Entities -->
+          <button id="fetchEntities">Fetch Entities</button>
+          <div class="entity-list" id="entityList">
+            <p>No entities to display. Click "Fetch Entities" to load data.</p>
+          </div>
+      
+          <!-- Delete Entity Form -->
+          <form id="deleteEntityForm">
+            <h2>Delete an Entity</h2>
+            <label for="entityId">Entity ID</label>
+            <input type="text" id="entityId" name="entityId" placeholder="Enter entity ID" required>
+            <button type="submit" class="delete-button">Delete Entity</button>
+            <p id="deleteMessage"></p>
+          </form>
+        </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
